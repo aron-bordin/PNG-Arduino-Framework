@@ -1,0 +1,8 @@
+Bluetooth 			KEYWORD1
+getrxPin			KEYWORD2
+gettxPin			KEYWORD2
+setrxPin			KEYWORD2
+settxPin			KEYWORD2
+setupBluetooth		KEYWORD2
+Read				KEYWORD2
+Send				KEYWORD2
