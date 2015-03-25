@@ -9,25 +9,22 @@ PNG Framework was developed by stutents of Unesp - University of the State of SÃ
 
 ## Roadmap
 
-This is a completely new library, we have a lot to do. In the next version, we'd love to:
-* Bluetooth
-..* Test with more modules
-* Motor
-..* Support N motors.(This version works with two motors)
-..* Add new motor drivers support(This version works with L298N Motor Driver Board)
-* Servo
-..* Rewrite the object without use arduino Servo.h
+We have to organize all modules, write some tutorials and publish it. It will take some time...
 
 
 ## Libraries
 
 This version supports some Arduino components:
 * Bluetooth
-* Motor
-* Reflection Sensor
-* Servo
-* Ultrasonic
 * [LED Matrix - 74HC595/74HC138](http://www.elabpeers.com/led-matrix-display.html)
+
+## Tutorials
+* Bluetooth
+..* [How to connect an Android device with Arduino and bluetooth](https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/)
+
+* LED Matrix
+..* [How to use Dot LED Matrix Display with Arduino](https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/)
+
 
 ## Installation
 
@@ -43,8 +40,18 @@ Any help will be appreciated :)
 
 ## About .PNG team
 
-
 [Aron Barreira Bordin](http://github.com/aron-bordin/)
+
+Felipe Kutait
+
+Hugo Waki
+
 [Mateus Lopes](https://github.com/lopeslopes)
+
+Matheus Barbosa
+
 [Raul Pelegrini Neto](https://github.com/RaulPelegrini)
+
 [Vinicius Moretto](https://github.com/vinimoretto)
+
+Vitor Costanzo
