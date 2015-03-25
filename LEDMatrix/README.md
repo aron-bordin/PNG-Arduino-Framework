@@ -12,7 +12,6 @@ PNG Framework was developed by stutents of Unesp - University of the State of SÃ
 2. Unzip it
 3. Move all folders to your Library folder (On your `Libraries` folder inside Sketchbooks of Arduino software).
 
-
 ## LED Matrix
 
 This module will help you to work with [16x16 LED Matrix with Arduino](http://www.elabpeers.com/led-matrix-display.html).

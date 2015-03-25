@@ -125,7 +125,7 @@ Bluetooth::Bluetooth(int r, int t){
  * Read received message
  * @return
  */
-char * Bluetooth::Read(){
+char * Bluetooth::read(){
     int i = 0;
     char c;
     char ch[1024];
@@ -146,6 +146,6 @@ char * Bluetooth::Read(){
  * Send a message to the connected device by Bluetooth
  * @param char[] message
  */
-void Bluetooth::Send(char c[]){
+void Bluetooth::send(char c[]){
     btSerial->print(c);
 }

@@ -19,7 +19,7 @@ public:
     Bluetooth(int r, int t);
     int getrxPin();
     int gettxPin();
-    char * Read();
+    char * read();
     char * getName();
     char getMessageEnd();
     void setMessageEnd(char end);
@@ -27,7 +27,7 @@ public:
     void setrxPin(int rx);
     void settxPin(int tx);
     void setupBluetooth();
-    void Send(char c[]);
+    void send(char c[]);
 };
 
 
