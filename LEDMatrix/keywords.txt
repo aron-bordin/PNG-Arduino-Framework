@@ -1,0 +1,7 @@
+LedMatrixObject			KEYWORD1
+clear					KEYWORD2
+draw					KEYWORD2
+setScene				KEYWORD2
+setLedOn				KEYWORD2
+setLedOff				KEYWORD2
+toggleLed				KEYWORD2
