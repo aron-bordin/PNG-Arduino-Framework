@@ -19,11 +19,11 @@ This version supports some Arduino components:
 * [LED Matrix - 74HC595/74HC138](http://www.elabpeers.com/led-matrix-display.html)
 
 ## Tutorials
-* Bluetooth
-..* [How to connect an Android device with Arduino and bluetooth](https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/)
+* Bluetooth:
+  * [How to connect an Android device with Arduino and bluetooth](https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/)
 
-* LED Matrix
-..* [How to use Dot LED Matrix Display with Arduino](https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/)
+* LED Matrix:
+  * [How to use Dot LED Matrix Display with Arduino](https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/)
 
 
 ## Installation
