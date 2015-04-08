@@ -1,4 +1,5 @@
-# Installation
+Installation
+============
 
 1. Download the master branch from GitHub.
 2. Unzip it

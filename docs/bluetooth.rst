@@ -1,4 +1,5 @@
-# Bluetooth
+Bluetooth
+=========
 
 This module can be used to send and receive bluetooth data. If you want to connect your Arduino with a Bluetooth device, Arduino or any other, check the Helpers module to find some classes that will help you to connect them.
 This module was tested with:
@@ -9,61 +10,67 @@ This module was tested with:
 It'll probably work with similar components. If you test it a component not listed here, please add a comment in my blog, open a pull request or edit this file to share if it's working or if you are getting some error.
 
 
-## Tutorials
+Tutorials
+---------
 
-* [How to connect an Android device with Arduino and bluetooth](https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/)
+* `How to connect an Android device with Arduino and bluetooth <https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/>`_
 
 
-## Simple Example
+Simple Example
+--------------
 
 Include the library
-```c++
-#include <SoftwareSerial.h>
-#include "Bluetooth.h"
-```
+.. code-block:: c
+
+	#include <SoftwareSerial.h>
+	#include "Bluetooth.h"
 
 Create a new Bluetooth object
-```c++
-Bluetooth *blue = new Bluetooth(5, 6);
-```
 
-Add the following method in **void setup()**:
-```c++
-blue->setupBluetooth();
-```
-Now you can use any method on **void loop()**:
-```c++
-String msg = blue->read(); // read and receive a message
-blue->send("I'm sending a message");
-```
+.. code-block:: c
 
+	Bluetooth *blue = new Bluetooth(5, 6);
 
-## Full example - Chat
-```c++
-#include "Bluetooth.h"
-#include <SoftwareSerial.h>
+Add the following method in **void setup()**
+.. code-block:: c
 
-Bluetooth *blue = new Bluetooth(2, 3); //RX=2, TX=3
-
-void setup(){
-	Serial.begin(9600);
-	blue->setName("Robo1-TCC");
-	blue->setPIN(1234);
-	blue->setMessageEnd('#');
 	blue->setupBluetooth();
-}
 
-void loop(){
-	String msg = blue->read();
-	if (msg.length() > 0) {
-		Serial.println(msg);
+Now you can use any method on **void loop()**
+.. code-block:: c
+
+	String msg = blue->read(); // read and receive a message
+	blue->send("I'm sending a message");
+
+
+
+Full example - Chat
+-------------------
+.. code-block:: cpp
+
+	#include "Bluetooth.h"
+	#include <SoftwareSerial.h>
+
+	Bluetooth *blue = new Bluetooth(2, 3); //RX=2, TX=3
+
+	void setup(){
+		Serial.begin(9600);
+		blue->setName("Robo1-TCC");
+		blue->setPIN(1234);
+		blue->setMessageEnd('#');
+		blue->setupBluetooth();
 	}
-}
 
-```
+	void loop(){
+		String msg = blue->read();
+		if (msg.length() > 0) {
+			Serial.println(msg);
+		}
+	}
 
 
-## Methods
+Documentation
+-------------
 
 **Bluetooth(int r, int t);** - Create a new Bluetooth object with RX and TX PINs
 
@@ -92,9 +99,3 @@ void loop(){
 **void send(char c[]);** - Send a message
 
 **void setPIN(int pin);** - Set bluetooth PIN
-    
-
-## Contribute
-
-This library still under development. We need help adding new components and testing with differents Arduino and components versions. 
-Any help will be appreciated :)
