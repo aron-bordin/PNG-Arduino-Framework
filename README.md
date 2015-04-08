@@ -3,7 +3,7 @@ PNG-Arduino-Framework - Beta 0.1
 
 .PNG - Programmers of New Generation
 
-https://readthedocs.org/projects/png-arduino-framework/badge/?version=latest
+![](https://readthedocs.org/projects/png-arduino-framework/badge/?version=latest)
 
 
 ## About
