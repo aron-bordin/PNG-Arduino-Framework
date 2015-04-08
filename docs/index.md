@@ -30,13 +30,6 @@ This version supports some Arduino components:
   * [Flappy Duino – Creating an Arduino clone of Flappy Bird with LED Matrix](https://bytedebugger.wordpress.com/2015/01/29/flappy-duino-creating-an-arduino-clone-of-flappy-bird-with-led-matrix/)
 
 
-## Installation
-
-1. Download the master branch from GitHub.
-2. Unzip it
-3. Move all folders to your Library folder (On your `Libraries` folder inside Sketchbooks of Arduino software).
-
-
 ## Contribute
 
 This library still under development. We need help adding new components and testing with differents Arduino and components versions. 
