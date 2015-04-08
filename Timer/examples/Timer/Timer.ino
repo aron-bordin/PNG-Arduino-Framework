@@ -17,22 +17,30 @@
  */
 
 
-#include "Bluetooth.h"
-#include <SoftwareSerial.h>
+#include "Timer.h"
 
-Bluetooth *blue = new Bluetooth(2, 3); //RX=2, TX=3
+Timer *timer1 = new Timer(6000);
+Timer *timer2 = new Timer(500);
+
 
 void setup(){
 	Serial.begin(9600);
-	blue->setName("Robo1-TCC");
-	blue->setPIN(1234);
-	blue->setMessageEnd('#');
-	blue->setupBluetooth();
+	timer1->setOnTimer(&PrintHello1);
+	timer1->Start();
+
+	timer2->setOnTimer(&PrintHello2);
+	timer2->Start();
+
 }
 
+void PrintHello1(){
+	Serial.println("Hello timer 1 !!");
+}
+
+void PrintHello2(){
+	Serial.println("Hello timer 2!!");
+}
 void loop(){
-	String msg = blue->read();
-	if (msg.length() > 0) {
-		Serial.println(msg);
-	}
+	timer1->Update();
+	timer2->Update();
 }
