@@ -1,4 +1,4 @@
-PNG-Arduino-Framework - Beta 0.1
+PNG Arduino Framework - Beta 0.1
 ================================
 
 .PNG - Programmers of New Generation
