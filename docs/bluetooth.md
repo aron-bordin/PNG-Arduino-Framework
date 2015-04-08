@@ -9,10 +9,11 @@ This module was tested with:
 It'll probably work with similar components. If you test it a component not listed here, please add a comment in my blog, open a pull request or edit this file to share if it's working or if you are getting some error.
 
 
-## Example
+## Simple Example
 
 Include the library
 ```c++
+#include <SoftwareSerial.h>
 #include "Bluetooth.h"
 ```
 
@@ -29,6 +30,30 @@ Now you can use any method on **void loop()**:
 ```c++
 String msg = blue->read(); // read and receive a message
 blue->send("I'm sending a message");
+```
+
+## Full example - Chat
+```c++
+#include "Bluetooth.h"
+#include <SoftwareSerial.h>
+
+Bluetooth *blue = new Bluetooth(2, 3); //RX=2, TX=3
+
+void setup(){
+	Serial.begin(9600);
+	blue->setName("Robo1-TCC");
+	blue->setPIN(1234);
+	blue->setMessageEnd('#');
+	blue->setupBluetooth();
+}
+
+void loop(){
+	String msg = blue->read();
+	if (msg.length() > 0) {
+		Serial.println(msg);
+	}
+}
+
 ```
 
 

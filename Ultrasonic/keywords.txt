@@ -1,0 +1,8 @@
+Ultrasonic			KEYWORD1
+setupPINs			KEYWORD2
+setTriggerPIN		KEYWORD2
+setEchoPIN			KEYWORD2
+getTriggerPIN		KEYWORD2
+getEchoPIN			KEYWORD2
+readDistanceCM		KEYWORD2
+readDistanceRaw		KEYWORD2
