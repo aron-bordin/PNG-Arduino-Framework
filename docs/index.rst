@@ -5,6 +5,7 @@
    :maxdepth: 2
 
    about
+   showcase
    installation
    bluetooth
    led_matrix
