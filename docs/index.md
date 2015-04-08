@@ -17,6 +17,7 @@ We have to organize all modules, write some tutorials and publish it. It will ta
 ## Libraries
 
 This version supports some Arduino components:
+
 * Bluetooth
 * [LED Matrix - 74HC595/74HC138](http://www.elabpeers.com/led-matrix-display.html)
 
