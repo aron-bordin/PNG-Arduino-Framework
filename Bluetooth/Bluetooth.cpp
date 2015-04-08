@@ -1,4 +1,24 @@
+/**
+ *     
+    This file is part of .PNG Arduino Framework.
+
+    .PNG Arduino Framework is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    .PNG Arduino Framework is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with .PNG Arduino Framework.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 #include "Bluetooth.h"
+
 
 /**
  * Get Bluetooth RX PIN
@@ -60,8 +80,9 @@ char Bluetooth::getMessageEnd(){
  * Set Bluetooth device name
  * @param char[] name
  */
-void Bluetooth::setName(char name[]){
-    strcpy(name, this->name);
+void Bluetooth::setName(char new_name[]){
+    strcpy(name, "AT+NAME");
+    strcat(name, new_name);
 }
 
 /**
@@ -74,41 +95,32 @@ void Bluetooth::setupBluetooth(){
 
     btSerial->begin(9600);
 
-    Serial.println("Setting bluetooth with 9600");
     btSerial->write("AT+BAUD4");
-    while (btSerial->available()) 
-        Serial.write(btSerial->read());
-
-    Serial.println("\nSetting Bluetooth name");
-    char _name[255];
-    strcpy(_name, "AT+NAME");
-    strcat(_name, name);
-    btSerial->write(name);
-
-    while (btSerial->available()) 
-        Serial.write(btSerial->read());
-
-    Serial.println("\nConfigurando PIN para 6666");
-    btSerial->write("AT+PIN6666");
     delay(1100);
+    Serial.println("\nSetting bluetooth with 9600");
+    while (btSerial->available())
+        Serial.write(btSerial->read());
+
+    btSerial->write(name);
+    delay(1100);
+    Serial.print("\nSetting Bluetooth name: ");
+    Serial.println(name);
+
+    while (btSerial->available()) 
+        Serial.write(btSerial->read());
+
+    btSerial->write(PIN);
+    delay(1100);
+    Serial.print("\nNew PIN: ");
+    Serial.println(PIN);
     while (btSerial->available()) 
     Serial.write(btSerial->read());
 
-    Serial.println("\nVersao do bluetooth");
     btSerial->write("AT+VERSION");
     delay(1100);
+    Serial.print("\nBluetooth version");
     while (btSerial->available()) 
     Serial.write(btSerial->read());
-}
-
-/**
- * Create Bluetooth object with RX = 2 and TX = 3
- */
-Bluetooth::Bluetooth(){
-    setrxPin(2);
-    settxPin(3);
-    btSerial = new SoftwareSerial(2, 3);
-    setName("PNGFramework");
 }
 
 /**
@@ -118,7 +130,7 @@ Bluetooth::Bluetooth(int r, int t){
     setrxPin(r);
     settxPin(t);
     setName("PNGFramework");
-    btSerial = new SoftwareSerial(r, t);
+    setPIN(6666);
 }
 
 /**
@@ -148,4 +160,22 @@ char * Bluetooth::read(){
  */
 void Bluetooth::send(char c[]){
     btSerial->print(c);
+}
+
+/**
+ * Get the bluetooth PIN
+ */
+char *Bluetooth::getPIN(){
+    return &PIN[0];
+}
+
+/**
+ * Set the bluetooth PIN
+ * @param pin [description]
+ */
+void Bluetooth::setPIN(int pin){
+    char _pin[32];
+    strcpy(PIN, "AT+PIN");
+    sprintf(_pin, "%d", pin);
+    strcat(PIN, _pin);
 }

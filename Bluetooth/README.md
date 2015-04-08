@@ -25,21 +25,21 @@ PNG Framework was developed by stutents of Unesp - University of the State of SÃ
 This module can be used to send and receive bluetooth data. If you want to connect your Arduino with a Bluetooth device, Arduino or any other, check the Helpers module to find some classes that will help you to connect them.
 This module was tested with:
 * BC417 Bluetooth to Serial
-* Bluetooth-RS232 HC-06
+* Bluetooth-RS232 HC-05
 
 It'll probably work with similar components. If you test it a component not listed here, please add a comment in my blog, open a pull request or edit this file to share if it's working or if you are getting some error.
 
 
 ## Example
 
-Inclued the libray
+Include the library
 ```c++
 	#include "Bluetooth.h"
 ```
 
 Create a new Bluetooth object
 ```c++
-	Bluetooth *blue = new Bluetooth();
+	Bluetooth *blue = new Bluetooth(5, 6);
 ```
 
 Add the following method in **void setup()**:
@@ -55,13 +55,13 @@ Now you can use any method on **void loop()**:
 
 ## Documentation
 
-**Bluetooth();** - Create a new Bluetooth object
-
 **Bluetooth(int r, int t);** - Create a new Bluetooth object with RX and TX PINs
 
 **int getrxPin();** - Get the RX PIN
 
 **int gettxPin();** - Get the TX PIN
+
+**char * getPIN();** - Get Bluetooth PIN
 
 **char * read();** - Read and receive a message
 
@@ -81,6 +81,8 @@ Now you can use any method on **void loop()**:
 
 **void send(char c[]);** - Send a message
 
+**void setPIN(int pin);** - Set bluetooth PIN
+    
 
 ## Contribute
 
