@@ -1,8 +1,6 @@
 LED Matrix
 ==========
 
-
-
 This module will help you to work with `16x16 LED Matrix with Arduino <http://www.elabpeers.com/led-matrix-display.html>`_.
 
 You can read the full tutorial here: https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/

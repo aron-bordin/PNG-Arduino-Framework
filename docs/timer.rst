@@ -3,14 +3,16 @@ Arduino Timer
 
 This module allow us to easily create Timer callbacks. In a predetermined interval, your function will be called. Works as a "thread", where a secondary function will run when necessary.
 
+There are two types of timers
+* Default: Will run the callback each interval
+* Single-shot: Run only once. If you need to run a single shot timer again, use the method ->Start();
+
+
 Tutorials
 ---------
 
 * `Using Timer Object – interval and singleshot callback – in Arduino <https://bytedebugger.wordpress.com/2014/06/18/tutorial-using-timer-object-interval-and-singleshot-callback-in-arduino/>`_
 
-There are two types of timers
-* Default: Will run the callback each interval
-* Single-shot: Run only once. If you need to run a single shot timer again, use the method ->Start();
 
 Simple Example
 --------------
@@ -38,9 +40,9 @@ Now add this method on **void loop()**
 	timer1->Update(); //will check the Timer and if necessary, will run it.
 
 
-
 Full example - Two timers
 -------------------------
+
 .. code-block:: cpp
 
 #include "Timer.h"

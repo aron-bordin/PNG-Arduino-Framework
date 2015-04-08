@@ -31,6 +31,7 @@ Now you can use any method on **void loop()**::
 
 Full example - Distance
 -----------------------
+
 .. code-block:: c
 
 		#include "Ultrasonic.h"
@@ -48,8 +49,6 @@ Full example - Distance
 			Serial.println(ult->readDistanceCM());
 			delay(500);
 		}
-
-
 
 
 Methods
@@ -70,10 +69,3 @@ Methods
 **float readDistanceCM();** - Read the distance in CM
 
 **float readDistanceRaw();** - Read the raw value returned by the sensor
-    
-
-Contribute
-----------
-
-This library still under development. We need help adding new components and testing with differents Arduino and components versions. 
-Any help will be appreciated :)

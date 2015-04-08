@@ -43,7 +43,6 @@ Now you can use any method on **void loop()**
 	blue->send("I'm sending a message");
 
 
-
 Full example - Chat
 -------------------
 .. code-block:: cpp
