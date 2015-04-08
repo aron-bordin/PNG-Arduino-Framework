@@ -13,22 +13,22 @@ It'll probably work with similar components. If you test it a component not list
 
 Include the library
 ```c++
-	#include "Bluetooth.h"
+#include "Bluetooth.h"
 ```
 
 Create a new Bluetooth object
 ```c++
-	Bluetooth *blue = new Bluetooth(5, 6);
+Bluetooth *blue = new Bluetooth(5, 6);
 ```
 
 Add the following method in **void setup()**:
 ```c++
-	blue->setupBluetooth();
+blue->setupBluetooth();
 ```
 Now you can use any method on **void loop()**:
 ```c++
-	String msg = blue->read(); // read and receive a message
-	blue->send("I'm sending a message");
+String msg = blue->read(); // read and receive a message
+blue->send("I'm sending a message");
 ```
 
 
