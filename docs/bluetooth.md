@@ -1,4 +1,4 @@
-## Bluetooth
+# Bluetooth
 
 This module can be used to send and receive bluetooth data. If you want to connect your Arduino with a Bluetooth device, Arduino or any other, check the Helpers module to find some classes that will help you to connect them.
 This module was tested with:
@@ -7,6 +7,11 @@ This module was tested with:
 * Bluetooth-RS232 HC-05
 
 It'll probably work with similar components. If you test it a component not listed here, please add a comment in my blog, open a pull request or edit this file to share if it's working or if you are getting some error.
+
+
+## Tutorials
+
+* [How to connect an Android device with Arduino and bluetooth](https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/)
 
 
 ## Simple Example
@@ -31,6 +36,7 @@ Now you can use any method on **void loop()**:
 String msg = blue->read(); // read and receive a message
 blue->send("I'm sending a message");
 ```
+
 
 ## Full example - Chat
 ```c++

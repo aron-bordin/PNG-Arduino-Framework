@@ -1,4 +1,4 @@
-## Ultrasonic
+# Ultrasonic
 
 This module can be used to read distance with ultrasonic on Arduino.
 This module was tested with:
@@ -49,12 +49,19 @@ void loop(){
 ## Methods
 
 **Ultrasonic(int T_PIN, int E_PIN);** - Create the Ultrasonic object
+
 **void setupPINs();** - If you change any PIN value, you'll need to run this method to update it
+
 **void setTriggerPIN(int T_PIN);** - Set the TRIGGER_PIN
+
 **void setEchoPIN(int E_PIN);** - Set the ECHO_PIN
+
 **int getTriggerPIN();** - Get the TRIGGER_PIN
+
 **int getEchoPIN();** - Get the ECHO_PIN
+
 **float readDistanceCM();** - Read the distance in CM
+
 **float readDistanceRaw();** - Read the raw value returned by the sensor
     
 

@@ -1,7 +1,8 @@
-PNG Arduino Framework - Beta 0.1
-================================
+# PNG Arduino Framework - Beta 0.1
+
 
 .PNG - Programmers of New Generation
+If you like this project, please, star it :)
 
 
 ## About
@@ -20,6 +21,7 @@ This version supports some Arduino components:
 
 * Bluetooth
 * [LED Matrix - 74HC595/74HC138](http://www.elabpeers.com/led-matrix-display.html)
+* Ultrasonic
 
 
 ## Tutorials

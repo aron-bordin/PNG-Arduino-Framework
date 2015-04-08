@@ -1,5 +1,5 @@
-LED Matrix
-==========
+# LED Matrix
+
 
 
 This module will help you to work with [16x16 LED Matrix with Arduino](http://www.elabpeers.com/led-matrix-display.html).
@@ -7,8 +7,7 @@ This module will help you to work with [16x16 LED Matrix with Arduino](http://ww
 You can read the full tutorial here: https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/
 
 
-Tutorials
----------
+## Tutorials
 
 * [How to use Dot LED Matrix Display with Arduino](https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/)
 * [Flappy Duino – Creating an Arduino clone of Flappy Bird with LED Matrix](https://bytedebugger.wordpress.com/2015/01/29/flappy-duino-creating-an-arduino-clone-of-flappy-bird-with-led-matrix/)
@@ -56,8 +55,8 @@ void loop(){
 ```
 
 
-Documentation
--------------
+## Documentation
+
 
 **LedMatrixObject(byte LEDARRAY_D, byte LEDARRAY_C, byte LEDARRAY_B, byte LEDARRAY_A, byte LEDARRAY_G, byte LEDARRAY_DI, byte LEDARRAY_CLK, byte LEDARRAY_LAT);** - Create the LED matrix
 
@@ -74,8 +73,7 @@ Documentation
 **void toggleLed(int x, int y);** -  Toggle the state of the led x,y
 
 
-Contribute
-----------
+## Contribute
 
 This library still under development. We need help adding new components and testing with differents Arduino and components versions. 
 Any help will be appreciated :)

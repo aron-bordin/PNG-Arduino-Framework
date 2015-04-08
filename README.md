@@ -23,16 +23,6 @@ This version supports some Arduino components:
 * Bluetooth
 * [LED Matrix - 74HC595/74HC138](http://www.elabpeers.com/led-matrix-display.html)
 
-
-## Tutorials
-* Bluetooth:
-  * [How to connect an Android device with Arduino and bluetooth](https://bytedebugger.wordpress.com/2014/06/27/tutorial-how-to-connect-an-android-device-with-arduino-and-bluetooth/)
-
-* LED Matrix:
-  * [How to use Dot LED Matrix Display with Arduino](https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/)
-  * [Flappy Duino – Creating an Arduino clone of Flappy Bird with LED Matrix](https://bytedebugger.wordpress.com/2015/01/29/flappy-duino-creating-an-arduino-clone-of-flappy-bird-with-led-matrix/)
-
-
 ## Installation
 
 1. Download the master branch from GitHub.
