@@ -1,0 +1,12 @@
+Motor	 			KEYWORD1
+setPINs				KEYWORD2
+setSpeed 			KEYWORD2
+setMotorSpeed1		KEYWORD2
+setMotorSpeed2		KEYWORD2
+goFront				KEYWORD2
+goRight 			KEYWORD2
+goRightStrong		KEYWORD2
+goLeft 				KEYWORD2
+goLeftStrong 		KEYWORD2
+goBack				KEYWORD2
+goStop				KEYWORD2
