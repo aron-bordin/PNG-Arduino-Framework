@@ -14,6 +14,7 @@ Simple Example
 --------------
 
 Include the library
+
 .. code-block:: c
 
 	#include "Motor.h"
@@ -25,6 +26,7 @@ Create a new Motor object. Set the PIN values as parameters, in this sequence: I
 	Motor *m = new Motor(6, 7, 5, 8, 9, 11);
 
 Now you can use any method on **void loop()**
+
 .. code-block:: c
 
 	m->goFront();
@@ -58,26 +60,26 @@ Full example
 Documentation
 -------------
 
-**Motor(byte m1_a, byte m1_b, byte m1_pwm, byte m2_a, byte m2_b, byte m2_pwm); ** - Create the Motor with IN1, IN2, ENA, IN3, IN3, ENB
+**Motor(byte m1_a, byte m1_b, byte m1_pwm, byte m2_a, byte m2_b, byte m2_pwm);** - Create the Motor with IN1, IN2, ENA, IN3, IN3, ENB
 
-**void setPINs(byte m1_a, byte m1_b, byte m1_pwm, byte m2_a, byte m2_b, byte m2_pwm); ** - Set IN1, IN2, ENA, IN3, IN3, ENB values
+**void setPINs(byte m1_a, byte m1_b, byte m1_pwm, byte m2_a, byte m2_b, byte m2_pwm);** - Set IN1, IN2, ENA, IN3, IN3, ENB values
 
-**void setSpeed(byte v); ** - Set the speed of both motors. Value from 0 to 255
+**void setSpeed(byte v);** - Set the speed of both motors. Value from 0 to 255
 
-**void setMotorSpeed1(byte v); ** - Set the speed of motor 1. Value from 0 to 255
+**void setMotorSpeed1(byte v);** - Set the speed of motor 1. Value from 0 to 255
 
-**void setMotorSpeed2(byte v); ** - Set the speed of motor 2. Value from 0 to 255
+**void setMotorSpeed2(byte v);** - Set the speed of motor 2. Value from 0 to 255
 
-**void goFront(); ** - Go front  
+**void goFront();** - Go front  
 
-**void goRight(); ** - Go right, activating one wheel
+**void goRight();** - Go right, activating one wheel
 
-**void goRightStrong(); ** - Go right, activating both wheels
+**void goRightStrong();** - Go right, activating both wheels
 
-**void goLeft(); ** - Go left, activating one wheel
+**void goLeft();** - Go left, activating one wheel
 
-**void goLeftStrong(); ** - Go left, activating both wheels
+**void goLeftStrong();** - Go left, activating both wheels
 
-**void goBack(); ** - Go back
+**void goBack();** - Go back
 
-**void goStop(); ** - Stop the movement
+**void goStop();** - Stop the movement
