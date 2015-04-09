@@ -45,7 +45,7 @@ Full example - Two timers
 
 .. code-block:: cpp
 
-#include "Timer.h"
+	#include "Timer.h"
 
 	Timer *timer1 = new Timer(6000);
 	Timer *timer2 = new Timer(500);
