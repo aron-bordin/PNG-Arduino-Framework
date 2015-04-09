@@ -9,6 +9,7 @@
    installation
    bluetooth
    led_matrix
+   motor
    timer
    ultrasonic
    contribute
