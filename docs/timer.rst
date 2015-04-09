@@ -18,6 +18,7 @@ Simple Example
 --------------
 
 Include the library
+
 .. code-block:: c
 
 	#include "Timer.h"
@@ -29,12 +30,14 @@ Create a new Timer object
 	Timer *timer1 = new Timer(6000); //timer with 6 seconds
 
 Add the following methods in **void setup()**
+
 .. code-block:: c
 
 	timer1->setOnTimer(&FunctionCallback);
 	timer1->Start(); //start the thread.
 
 Now add this method on **void loop()**
+
 .. code-block:: c
 
 	timer1->Update(); //will check the Timer and if necessary, will run it.
