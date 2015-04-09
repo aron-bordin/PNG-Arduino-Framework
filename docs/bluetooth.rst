@@ -1,7 +1,7 @@
 Bluetooth
 =========
 
-This module can be used to send and receive bluetooth data. If you want to connect your Arduino with a Bluetooth device, Arduino or any other, check the Helpers module to find some classes that will help you to connect them.
+This module can be used to send and receive bluetooth data. If you want to connect your Arduino with a Bluetooth device, Arduino, Android, iOS or any other, check the Helpers module to find some classes that will help you to connect them.
 This module was tested with:
 
 * BC417 Bluetooth to Serial
