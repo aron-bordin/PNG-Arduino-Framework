@@ -4,8 +4,9 @@ Arduino Timer
 This module allow us to easily create Timer callbacks. In a predetermined interval, your function will be called. Works as a "thread", where a secondary function will run when necessary.
 
 There are two types of timers
-* Default: Will run the callback each interval
-* Single-shot: Run only once. If you need to run a single shot timer again, use the method ->Start();
+
+* **Default**: Will run the callback each interval
+* **Single-shot**: Run only once. If you need to run a single shot timer again, use the method ->Start();
 
 
 Tutorials
