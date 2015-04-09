@@ -20,6 +20,7 @@ Simple Example
 --------------
 
 Include the library
+
 .. code-block:: c
 
 	#include <SoftwareSerial.h>
@@ -32,11 +33,13 @@ Create a new Bluetooth object
 	Bluetooth *blue = new Bluetooth(5, 6);
 
 Add the following method in **void setup()**
+
 .. code-block:: c
 
 	blue->setupBluetooth();
 
 Now you can use any method on **void loop()**
+
 .. code-block:: c
 
 	String msg = blue->read(); // read and receive a message
