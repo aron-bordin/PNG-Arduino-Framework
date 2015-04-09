@@ -30,7 +30,7 @@ This version supports some Arduino components:
 
 1. Download the master branch from GitHub.
 2. Unzip it
-3. Move all folders to your Library folder (On your `Libraries` folder inside Sketchbooks of Arduino software).
+3. Move all folders to your Library folder (On your `libraries` folder inside Sketchbooks of Arduino software).
 
 
 ## Contribute
