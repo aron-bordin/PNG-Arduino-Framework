@@ -13,6 +13,7 @@ Simple Example
 --------------
 
 Include the library
+
 .. code-block:: c
 
 	#include "Ultrasonic.h"
@@ -24,7 +25,9 @@ Create a new Ultrasonic object
 	Ultrasonic *ult = new Ultrasonic(A5, A4); //TRIGGER_PIN and ECHO_PIN
 
 
-Now you can use any method on **void loop()**::
+Now you can use any method on **void loop()**
+
+.. code-block:: c
 
 	Serial.println(ult->readDistanceCM());
 
