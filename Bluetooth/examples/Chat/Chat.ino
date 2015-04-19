@@ -24,8 +24,8 @@ Bluetooth *blue = new Bluetooth(2, 3); //RX=2, TX=3
 
 void setup(){
 	Serial.begin(9600);
-	blue->setName("Robo1-TCC");
-	blue->setPIN(1234);
+	blue->setName("PNGArduinoFramework");
+	blue->setPIN(6666);
 	blue->setMessageEnd('#');
 	blue->setupBluetooth();
 }

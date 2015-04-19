@@ -95,6 +95,8 @@ void Bluetooth::setupBluetooth(){
 
     btSerial->begin(9600);
 
+    delay(200);
+    
     btSerial->write("AT+BAUD4");
     delay(1100);
     Serial.println("\nSetting bluetooth with 9600");
@@ -130,7 +132,8 @@ Bluetooth::Bluetooth(int r, int t){
     setrxPin(r);
     settxPin(t);
     setName("PNGFramework");
-    setPIN(6666);
+    setPIN(1234);
+    setMessageEnd('\0');
 }
 
 /**
