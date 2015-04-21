@@ -34,6 +34,7 @@ private:
     char msg[1024];
     char name[255];
     char message_end;
+    unsigned long baudrate;
 
 public:
     Bluetooth(int r, int t);
@@ -50,6 +51,8 @@ public:
     void setPIN(int pin);
     void setupBluetooth();
     void send(char c[]);
+    void setBaudrate(unsigned long baudrate);
+    void begin();
 };
 
 

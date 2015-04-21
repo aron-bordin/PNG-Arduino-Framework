@@ -4,7 +4,6 @@ Bluetooth
 This module can be used to send and receive bluetooth data. If you want to connect your Arduino with a Bluetooth device, Arduino, Android, iOS or any other, check the Helpers module to find some classes that will help you to connect them.
 This module was tested with:
 
-* BC417 Bluetooth to Serial
 * Bluetooth-RS232 HC-05
 
 It'll probably work with similar components. If you test it a component not listed here, please add a comment in my blog, open a pull request or edit this file to share if it's working or if you are getting some error.
@@ -32,11 +31,11 @@ Create a new Bluetooth object
 
 	Bluetooth *blue = new Bluetooth(5, 6);
 
-Add the following method in **void setup()**
+Add the following method in **void setup()** to start the bluetooth serial
 
 .. code-block:: c
 
-	blue->setupBluetooth();
+	blue->begin();
 
 Now you can use any method on **void loop()**
 
@@ -57,10 +56,11 @@ Full example - Chat
 
 	void setup(){
 		Serial.begin(9600);
-		blue->setName("Robo1-TCC");
-		blue->setPIN(1234);
+		blue->setName("PNGArduinoFramework");
+		blue->setPIN(6666);
 		blue->setMessageEnd('#');
-		blue->setupBluetooth();
+		blue->setupBluetooth(); //apply this changes to the module. You need to run it only in the first time
+	    blue->begin(); //start the bluetooth serial
 	}
 
 	void loop(){
@@ -96,8 +96,12 @@ Documentation
 
 **void settxPin(int tx);** - Set TX PIN
 
-**void setupBluetooth();** - Setup the Bluetooth module
+**void setupBluetooth();** - Apply the bluetooth changes(name or pin). Must be used in the **void setup()**
 
 **void send(char c[]);** - Send a message
 
 **void setPIN(int pin);** - Set bluetooth PIN
+
+**void setBaudrate(unsigned long baudrate);** - Set the Bluetooth serial Baudrate
+
+**void begin();** - Start the Bluetooth serial. Must be used in the **void setup()**

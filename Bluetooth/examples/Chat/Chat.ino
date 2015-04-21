@@ -27,7 +27,8 @@ void setup(){
 	blue->setName("PNGArduinoFramework");
 	blue->setPIN(6666);
 	blue->setMessageEnd('#');
-	blue->setupBluetooth();
+	blue->setupBluetooth(); //apply this changes to the module. You need to run it only in the first time
+    blue->begin(); //start the bluetooth serial
 }
 
 void loop(){

@@ -86,17 +86,20 @@ void Bluetooth::setName(char new_name[]){
 }
 
 /**
+ * Set the Serial Baudrate for the bluetooth module
+ * @param baudrate value with the  baudrate
+ */
+void Bluetooth::setBaudrate(unsigned long baudrate){
+    this->baudrate = baudrate;
+}
+
+/**
  * Setup Bluetooth settings. Must be used in Arduino setup()
  */
 void Bluetooth::setupBluetooth(){
-    btSerial = new SoftwareSerial(rxPin, txPin);
-    pinMode(txPin, OUTPUT);
-    pinMode(rxPin, INPUT);
-
-    btSerial->begin(9600);
-
-    delay(200);
-    
+    btSerial->begin(baudrate);
+    delay(1100);
+    btSerial->write("AT");
     btSerial->write("AT+BAUD4");
     delay(1100);
     Serial.println("\nSetting bluetooth with 9600");
@@ -126,7 +129,7 @@ void Bluetooth::setupBluetooth(){
 }
 
 /**
- * Create Bluetooth objct with RX and TX parameters.
+ * Create and start the Serial of Bluetooth object with RX and TX parameters.
  */
 Bluetooth::Bluetooth(int r, int t){
     setrxPin(r);
@@ -134,6 +137,12 @@ Bluetooth::Bluetooth(int r, int t){
     setName("PNGFramework");
     setPIN(1234);
     setMessageEnd('\0');
+    setBaudrate(9600);
+    btSerial = new SoftwareSerial(r, t);
+}
+
+void Bluetooth::begin(){
+    btSerial->begin(baudrate);
 }
 
 /**
