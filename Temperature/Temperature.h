@@ -17,23 +17,23 @@
  */
 
 
-#include "Bluetooth.h"
-#include <SoftwareSerial.h>
 
-Bluetooth *blue = new Bluetooth(2, 3); //RX=2, TX=3
+#ifndef TEMPERATURE_H
+#define TEMPERATURE_H
 
-void setup(){
-	Serial.begin(9600);
-	blue->setName("PNGArduinoFramework");
-	blue->setPIN(6666);
-	blue->setMessageEnd('#');
-	blue->setupBluetooth(); //apply this changes to the module. You need to run it only in the first time
-	blue->begin(); //start the bluetooth serial
-}
+#include "Arduino.h"
 
-void loop(){
-	String msg = blue->read();
-	if (msg.length() > 0) {
-		Serial.println(msg);
-	}
-}
+
+class Temperature{
+private:
+    int pin;
+
+public:
+    Temperature(int PIN);
+    int getTemperatureC();
+    int getTemperatureF();
+    int getTemperatureRaw();
+};
+
+
+#endif

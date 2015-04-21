@@ -1,0 +1,4 @@
+Temperature				KEYWORD1
+getTemperatureC			KEYWORD2
+getTemperatureF			KEYWORD2
+getTemperatureRaw		KEYWORD2
