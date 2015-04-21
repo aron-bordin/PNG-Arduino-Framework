@@ -10,6 +10,7 @@
    bluetooth
    led_matrix
    motor
+   temperature
    timer
    ultrasonic
    contribute
