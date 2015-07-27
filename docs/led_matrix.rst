@@ -11,6 +11,7 @@ Tutorials
 
 * `How to use Dot LED Matrix Display with Arduino <https://bytedebugger.wordpress.com/2015/01/28/tutorial-how-to-use-dot-led-matrix-display-with-arduino/>`_
 * `Flappy Duino – Creating an Arduino clone of Flappy Bird with LED Matrix <https://bytedebugger.wordpress.com/2015/01/29/flappy-duino-creating-an-arduino-clone-of-flappy-bird-with-led-matrix/>`_
+* `Creating a simple car game with Arduino LED Matrix <https://bytedebugger.wordpress.com/2015/07/25/tutorial-creating-a-simple-car-game-with-arduino-led-matrix/>`_
 
 
 Example
