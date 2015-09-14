@@ -13,6 +13,7 @@
    temperature
    timer
    ultrasonic
+   helpers
    contribute
    license
 
