@@ -1,0 +1,5 @@
+ReflectionSensor 	KEYWORD1
+Calibrate			KEYWORD2
+isBlack				KEYWORD2
+rawSensor			KEYWORD2
+setPINLimit			KEYWORD2

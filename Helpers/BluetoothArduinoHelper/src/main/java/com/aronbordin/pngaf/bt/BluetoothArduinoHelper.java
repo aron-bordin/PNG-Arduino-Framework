@@ -15,7 +15,7 @@
     along with .PNG Arduino Framework.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.aronbordin;
+package com.aronbordin.pngaf.bt;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

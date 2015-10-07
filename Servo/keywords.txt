@@ -1,0 +1,5 @@
+ObjServo	KEYWORD1
+setPIN		KEYWORD2
+getPIN		KEYWORD2
+rotate		KEYWORD2
+setup		KEYWORD2
