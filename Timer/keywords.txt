@@ -1,4 +1,4 @@
-TimerObject 			KEYWORD1
+Timer 			KEYWORD1
 setInterval				KEYWORD2
 setEnabled				KEYWORD2
 setSingleShot			KEYWORD2
