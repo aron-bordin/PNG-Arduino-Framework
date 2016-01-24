@@ -81,11 +81,11 @@ Full example - Two timers
 Documentation
 -------------
 
-**TimerObject(unsigned long int ms);** - Create a Timer with the time
+**Timer(unsigned long int ms);** - Create a Timer with the time
 
-**TimerObject(unsigned long int ms, CallBackType callback);** Create a Timer with time and callback
+**Timer(unsigned long int ms, CallBackType callback);** Create a Timer with time and callback
 
-**TimerObject(unsigned long int ms, CallBackType callback, bool isSingle);** Create a Timer with time, callback and set if is single shot
+**Timer(unsigned long int ms, CallBackType callback, bool isSingle);** Create a Timer with time, callback and set if is single shot
 	
 **void setInterval(unsigned long int ms);** - Set callback interval
 
