@@ -103,6 +103,15 @@ unsigned long int Timer::getInterval(){
 unsigned long int Timer::getCurrentTime(){
 	return (unsigned long int)(millis() - LastTime);
 }
+
+unsigned long int Timer::getRemaining() {
+	if (blEnabled) {
+		return msInterval - (unsigned long int)(millis() - LastTime);
+	} else {
+		return msInterval - (unsigned long int)(millis() - (millis() - DiffTime));
+	}
+}
+
 CallBackType Timer::getOnTimerCallback(){
 	return onRun;
 }
