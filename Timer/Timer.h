@@ -55,6 +55,7 @@ public:
 
 	unsigned long int getInterval();
 	unsigned long int getCurrentTime();
+	unsigned long int getRemaining();
 	CallBackType getOnTimerCallback();
 
 	bool isEnabled();
