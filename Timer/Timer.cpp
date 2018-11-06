@@ -19,19 +19,7 @@
 
 #include "Timer.h"
 
-Timer::Timer(unsigned long int ms){
-	Create(ms, NULL, false);
-}
-
-Timer::Timer(unsigned long int ms, CallBackType callback){
-	Create(ms, callback, false);
-}
-
 Timer::Timer(unsigned long int ms, CallBackType callback, bool isSingle){
-	Create(ms, callback, isSingle);
-}
-
-void Timer::Create(unsigned long int ms, CallBackType callback, bool isSingle){
 	setInterval(ms);
 	setEnabled(false);
 	setSingleShot(isSingle);

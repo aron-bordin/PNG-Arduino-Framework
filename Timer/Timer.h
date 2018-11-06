@@ -27,7 +27,6 @@ typedef void (*CallBackType)();
 
 class Timer{
 private:
-	void Create(unsigned long int ms, CallBackType callback, bool isSingle);
 	unsigned long int msInterval;
 	bool blEnabled;
 	bool blSingleShot;
@@ -37,9 +36,7 @@ private:
 	unsigned long DiffTime;//used when I pause the Timer and need to resume
 
 public:
-	Timer(unsigned long int ms);
-	Timer(unsigned long int ms, CallBackType callback);
-	Timer(unsigned long int ms, CallBackType callback, bool isSingle);
+	Timer(unsigned long int ms, CallBackType callback = NULL, bool isSingle = false);
 	~Timer();
 
 	void setInterval(unsigned long int ms);
