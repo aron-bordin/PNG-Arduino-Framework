@@ -28,7 +28,7 @@ Timer::Timer(unsigned long int ms, CallBackType callback, bool isSingle){
 }
 
 void Timer::setInterval(unsigned long int ms){
-	msInterval = (ms > 0) ? ms : 0;
+	msInterval = ms;
 }
 
 void Timer::setEnabled(bool Enabled){
