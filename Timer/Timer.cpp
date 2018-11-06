@@ -96,7 +96,7 @@ unsigned long int Timer::getRemaining() {
 	if (blEnabled) {
 		return msInterval - (millis() - LastTime);
 	} else {
-		return msInterval - (millis() - (millis() - DiffTime));
+		return msInterval - DiffTime;
 	}
 }
 
