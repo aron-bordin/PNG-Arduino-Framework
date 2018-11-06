@@ -19,19 +19,7 @@
 
 #include "Timer.h"
 
-Timer::Timer(unsigned long int ms){
-	Create(ms, NULL, false);
-}
-
-Timer::Timer(unsigned long int ms, CallBackType callback){
-	Create(ms, callback, false);
-}
-
 Timer::Timer(unsigned long int ms, CallBackType callback, bool isSingle){
-	Create(ms, callback, isSingle);
-}
-
-void Timer::Create(unsigned long int ms, CallBackType callback, bool isSingle){
 	setInterval(ms);
 	setEnabled(false);
 	setSingleShot(isSingle);
@@ -40,7 +28,7 @@ void Timer::Create(unsigned long int ms, CallBackType callback, bool isSingle){
 }
 
 void Timer::setInterval(unsigned long int ms){
-	msInterval = (ms > 0) ? ms : 0;
+	msInterval = ms;
 }
 
 void Timer::setEnabled(bool Enabled){
@@ -84,9 +72,7 @@ void Timer::Update(){
 bool Timer::Tick(){
 	if(!blEnabled)
 		return false;
-	if(LastTime > millis()*2)//millis restarted
-		LastTime = 0;
-	if ((unsigned long int)(millis() - LastTime) >= msInterval) {
+	if (millis() - LastTime >= msInterval) {
 		LastTime = millis();
 		if(isSingleShot())
 			setEnabled(false);
@@ -101,14 +87,14 @@ unsigned long int Timer::getInterval(){
 }
 
 unsigned long int Timer::getCurrentTime(){
-	return (unsigned long int)(millis() - LastTime);
+	return millis() - LastTime;
 }
 
 unsigned long int Timer::getRemaining() {
 	if (blEnabled) {
-		return msInterval - (unsigned long int)(millis() - LastTime);
+		return msInterval - (millis() - LastTime);
 	} else {
-		return msInterval - (unsigned long int)(millis() - (millis() - DiffTime));
+		return msInterval - DiffTime;
 	}
 }
 
