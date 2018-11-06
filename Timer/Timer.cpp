@@ -74,7 +74,7 @@ bool Timer::Tick(){
 		return false;
 	if(LastTime > millis()*2)//millis restarted
 		LastTime = 0;
-	if ((unsigned long int)(millis() - LastTime) >= msInterval) {
+	if (millis() - LastTime >= msInterval) {
 		LastTime = millis();
 		if(isSingleShot())
 			setEnabled(false);
@@ -89,14 +89,14 @@ unsigned long int Timer::getInterval(){
 }
 
 unsigned long int Timer::getCurrentTime(){
-	return (unsigned long int)(millis() - LastTime);
+	return millis() - LastTime;
 }
 
 unsigned long int Timer::getRemaining() {
 	if (blEnabled) {
-		return msInterval - (unsigned long int)(millis() - LastTime);
+		return msInterval - (millis() - LastTime);
 	} else {
-		return msInterval - (unsigned long int)(millis() - (millis() - DiffTime));
+		return msInterval - (millis() - (millis() - DiffTime));
 	}
 }
 
