@@ -9,12 +9,6 @@ There are two types of timers
 * **Single-shot**: Run only once. If you need to run a single shot timer again, use the method ->Start();
 
 
-Tutorials
----------
-
-* `Using Timer Object – interval and singleshot callback – in Arduino <https://bytedebugger.wordpress.com/2014/06/18/tutorial-using-timer-object-interval-and-singleshot-callback-in-arduino/>`_
-
-
 Simple Example
 --------------
 
